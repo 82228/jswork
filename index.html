@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的待办事项</title>
+  <link rel="stylesheet" href="../js1/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="light">TODOLIST</h1>
+    </div>
+    <!-- 颜色变化 -->
+    <script>
+      function changeColor() {
+        const textElement = document.getElementById('light')
+        const color = ['#ff6347', '#ffa500', '#1e90ff', '#8a2be2']
+        let index = 0
+        setInterval(() => {
+          textElement.style.color = color[index]
+          index = (index + 1) % color.length
+        }, 3000)
+      }
+      changeColor()
+
+    </script>
+    <div class="center" style="position: relative;z-index: 100;">
+      <div class="box">
+        <div class="top">
+          <div class="top-left">
+            <h1>今日待办事项</h1>
+          </div>
+        </div>
+        <div class="list">
+          <div class="add">
+            <img src="" alt="">
+            <div>+</div>
+            <input type="text" placeholder="添加待办事项">
+            <select name="important" class="important">
+              <option value="重要">重要</option>
+              <option value="不重要">不重要</option>
+            </select>
+          </div>
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="imgss">
+      <img src="../js1/images/welcome.png" alt="">
+    </div>
+  </div>
+  <div class="sele">
+    <select name="selctTime" class="selctTime" aria-placeholder="推迟">
+      <option value="">推迟</option>
+      <option value="5">5分钟后</option>
+      <option value="15">15分钟后</option>
+      <option value="30">30分钟后</option>
+      <option value="60">1小时后</option>
+      <option value="180">3小时后</option>
+      <option value="明天">明天</option>
+    </select>
+
+    <div class="ok">
+      确认
+    </div>
+    <div class="delete">
+      <img src="./images/delete.png" alt="">
+    </div>
+
+  </div>
+  <script src="style.js"></script>
+
+</body>
+
+</html>
